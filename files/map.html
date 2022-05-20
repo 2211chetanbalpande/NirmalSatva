@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+     <script src="http://maps.google.com/maps?file=api&amp;v=2&amp;sensor=false&amp;key=ABQIAAAAvY_htg5RzYE1oj2BL4bFvxSRc9RmgUY0ng1PT46gfsZ_uuISzxROX5ZCo6sw1juxfGN03mgyAPAIoA" type="text/javascript"></script>
+
+   <script type="text/javascript">
+
+    function initialize() {
+      if (GBrowserIsCompatible()) {
+        var map = new GMap2(document.getElementById("map_canvas"));
+        map.setCenter(new GLatLng(xxx,xxx), 13);
+
+        var marker = new GMarker(map.getCenter());
+        GEvent.addListener(marker, "click", function () {
+          marker.openInfoWindowHtml("xxxxxxxxxxxx");
+        });
+        map.addOverlay(marker);
+      }
+    }
+
+    </script>
+    </head>
+    <body  onLoad="initialize()">
+        <div id="map_canvas" style="width: 300px; height: 250px; margin:auto;"></div> 
+    </body>
+</html>
